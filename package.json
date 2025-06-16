@@ -1,5 +1,5 @@
 {
-  "name": "studyloop",
+  "name": "studyloop-edtech-platform",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -32,11 +32,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shishir16092002/StudyLoop.git"
+    "url": "git+https://github.com/shishir16092002/StudyLoop-EdTech-Platform.git"
   },
   "author": "Shishir Yadav",
   "bugs": {
-    "url": "https://github.com/shishir16092002/StudyLoop/issues"
+    "url": "https://github.com/shishir16092002/StudyLoop-EdTech-Platform/issues"
   },
   "scripts": {
     "start": "react-scripts start",
