@@ -1,13 +1,22 @@
-import axios from "axios"
+import axios from 'axios';
 
-export const axiosInstance = axios.create({});
+export const axiosInstance = axios.create({
+  baseURL: process.env.REACT_APP_BASE_URL, 
+  withCredentials: true                    
+});
 
-export const apiConnector = (method, url, bodyData, headers, params) => {
-    return axiosInstance({
-        method:`${method}`,
-        url:`${url}`,
-        data: bodyData ? bodyData : null,
-        headers: headers ? headers: null,
-        params: params ? params : null,
-    });
-}
+// 2️⃣  Generic wrapper
+export const apiConnector = (
+  method = 'GET',
+  url = '/',           
+  bodyData = null,
+  headers = {},
+  params = {}
+) =>
+  axiosInstance({
+    method,
+    url,               
+    data: bodyData,
+    headers,
+    params
+  });
