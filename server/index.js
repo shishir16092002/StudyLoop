@@ -21,16 +21,25 @@ database.connect();
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-	cors({
-		origin:[
-				"http://localhost:3000",
-				'https://studyloop.vercel.app'
-		],
-		methods:["GET", "POST", "PUT", "DELETE"],
-		credentials:true,
-	})
-)
+
+const allowedOrigins = (process.env.CORS_ORIGIN || '')
+  .split(',')
+  .map(o => o.trim())
+  .filter(Boolean);                  // removes empty strings
+
+const corsOptions = {
+  origin: (origin, cb) => {
+    // allow requests with no Origin header (curl, Postman)
+    if (!origin || allowedOrigins.includes(origin)) {
+      return cb(null, true);
+    }
+    return cb(new Error('Not allowed by CORS'));
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,                      
+};
+
+app.use(cors(corsOptions));
 
 app.use(
 	fileUpload({
