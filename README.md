@@ -25,7 +25,7 @@
 | 👨‍🎓 Student    | `demo@student.dev`    | `Pass@123`      |
 
 
-### 💡 Tips
+### 💡 Note:-
 > **Demo accounts have read‑only access.**  
 > Instructors can’t create/edit/delete courses or change their profile, and students can’t enroll or purchase.
 
@@ -60,17 +60,17 @@
 ---
 
 ### 📊 Instructor Dashboard
-<img src="./Images/dashboard.png" width="600" height="320"/>
+<img src="./Images/dashboard.png" width="750" height="420"/>
 
 ---
 
 ### 📚 Course Page
-<img src="./Images/courses.png" width="600" />
+<img src="./Images/courses.png" width="750" />
 
 ---
 
 ### 🎬 Video Player
-<img src="./Images/video-player.png" width="600" height="320" />
+<img src="./Images/video-player.png" width="750" height="420" />
 
 
 ---
